@@ -179,3 +179,31 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Imaging data (CC-BY-SA 4.0) must never be committed
+data/
+
+# Model checkpoints are large and derived
+*.pt
+
+# results/ is ignored by default: predictions (*.nii.gz) and checkpoints (*.pt)
+# are large and reproducible, so they stay out of the repo.
+results/*
+# ...but DO track these small text result files:
+!results/comparison.csv
+!results/nnunet_run_info.json
+!results/metrics/
+!results/nnunet_config/
+!results/unet_seed0/
+!results/unet_seed1/
+!results/unet_seed2/
+# inside the re-included seed folders, ignore everything except run_info/history
+results/unet_seed0/*
+results/unet_seed1/*
+results/unet_seed2/*
+!results/unet_seed0/run_info.json
+!results/unet_seed0/history.json
+!results/unet_seed1/run_info.json
+!results/unet_seed1/history.json
+!results/unet_seed2/run_info.json
+!results/unet_seed2/history.json

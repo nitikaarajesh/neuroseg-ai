@@ -1,0 +1,10 @@
+{
+ "seed": 2,
+ "epochs": 200,
+ "best_epoch": 135,
+ "best_val_dice": 0.8901547789573669,
+ "train_minutes": 12.8,
+ "infer_sec_per_case": 0.041,
+ "parameters": 1187766,
+ "device": "cpu"
+}
