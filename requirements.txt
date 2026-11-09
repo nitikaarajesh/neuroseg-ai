@@ -1,0 +1,16 @@
+# Packages imported by the MONAI U-Net scripts in this repo
+# (scripts/*.py: train_unet.py, explore_train.py, evaluate.py, compare.py,
+#  figures.py, make_split.py, whole_dice.py).
+#
+# Versions are intentionally left unpinned here. Pin them to your training
+# environment with:  pip freeze > requirements.lock.txt
+monai
+torch
+nibabel
+numpy
+pandas
+matplotlib
+
+# nnU-Net v2 was run separately (Kaggle, Tesla T4 GPU); it is not imported by any
+# script above. Install it only in that environment:
+# nnunetv2
